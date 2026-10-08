@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ur" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0d6e4f">
+  <meta name="description" content="Rapid Approach (Remedies Finder) — Homeopathic dawa dhoondhne ka asaan app">
+  <title>Rapid Approach (Remedies Finder)</title>
+
+  <!-- PWA manifest (baad mein aayega) -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts: Nastaliq Urdu + Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Design file (agli file) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="brand">
+      <div class="logo">RA</div>
+      <div class="brand-text">
+        <h1>Rapid Approach</h1>
+        <p>Remedies Finder</p>
+      </div>
+    </div>
+    <button id="darkModeToggle" class="icon-btn" aria-label="Dark mode">🌙</button>
+  </header>
+
+  <!-- ================= MODE TOGGLE ================= -->
+  <!-- Hick's Law: sirf 2 choices — aam log ya doctor -->
+  <div class="mode-toggle" role="tablist">
+    <button class="mode-btn active" data-mode="general" role="tab">🏠 Aam Log</button>
+    <button class="mode-btn" data-mode="doctor" role="tab">🩺 Doctor</button>
+  </div>
+
+  <!-- ================= SEARCH BOX ================= -->
+  <div class="search-wrap">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput"
+             placeholder="Alamat likhein... bukhaar, sardi, sar dard"
+             autocomplete="off">
+      <button id="clearBtn" class="icon-btn hidden" aria-label="Saaf karein">✕</button>
+    </div>
+  </div>
+
+  <!-- ================= QUICK CHIPS ================= -->
+  <!-- Aam alamatein — ek tap mein search -->
+  <div class="chips" id="chips">
+    <button class="chip" data-symptom="bukhaar">Bukhaar</button>
+    <button class="chip" data-symptom="sardi">Sardi</button>
+    <button class="chip" data-symptom="khansi">Khansi</button>
+    <button class="chip" data-symptom="sar dard">Sar Dard</button>
+    <button class="chip" data-symptom="pait">Pait</button>
+    <button class="chip" data-symptom="zukam">Zukam</button>
+  </div>
+
+  <!-- ================= RESULTS ================= -->
+  <main id="results" class="results">
+    <!-- Yahan search ke nataij aayenge (JS bharega) -->
+  </main>
+
+  <!-- ================= DETAIL MODAL ================= -->
+  <!-- Medicine ki poori tafseel — popup mein -->
+  <div id="detailModal" class="modal hidden" role="dialog">
+    <div class="modal-card">
+      <button id="modalClose" class="icon-btn modal-close" aria-label="Band karein">✕</button>
+      <div id="modalContent"><!-- JS bharega --></div>
+    </div>
+  </div>
+
+  <!-- ================= TOAST ================= -->
+  <!-- Peak-End Rule: warm message app band hone par -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- ================= BOTTOM NAV (Thumb Zone) ================= -->
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-page="home">🏠<span>Home</span></button>
+    <button class="nav-btn" data-page="saved">⭐<span>Mehfooz</span></button>
+    <button class="nav-btn" data-page="about">ℹ️<span>Maloomat</span></button>
+  </nav>
+
+  <!-- ================= FOOTER DISCLAIMER ================= -->
+  <footer class="footer">
+    <p class="urdu-text" dir="rtl">⚕️ ڈس کلیمر</p>
+    <p>Yeh app sirf mashwara aur talaash ke liye hai. Ilaaj shuru karne se pehle
+       qualified homeopathic doctor se zaroor rabta karein.</p>
+    <p class="footer-brand">Rapid Approach (Remedies Finder) © 2026</p>
+  </footer>
+
+  <!-- ================= SCRIPTS (alag files — aapka faisla!) ================= -->
+  <script src="js/search.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
