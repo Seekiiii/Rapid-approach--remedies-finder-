@@ -1,0 +1,110 @@
+[
+  {
+    "naam": "Aconitum Napellus",
+    "urdu": "اکونائٹم نیپلس",
+    "alamatein": ["bukhaar", "bukhaar achanak", "sardi", "khauf", "ghabrahat", "sardi hawa lagne se"],
+    "tafseel": "Achanak bukhaar ka pehla ilaj — jaise thandi hawa lagne, dar, ya sadme ke baad. Bukhaar raat ke waqt achanak charhta hai, bechaini hoti hai, pyaas zyada hoti hai.",
+    "potency": "30",
+    "dosage": "3 goliyan har 2 ghantay baad (bukhaar utrne tak)",
+    "rubric_english": "Fever; sudden onset, after cold dry wind. Fear; anxiety, restlessness."
+  },
+  {
+    "naam": "Belladonna",
+    "urdu": "بیلاڈونا",
+    "alamatein": ["bukhaar", "bukhaar tez", "sar dard", "sar dard dhak dhak", "gala kharab", "gala soojna", "aankh", "sir dard"],
+    "tafseel": "Tez bukhaar, laal chehra, dhak dhak karta sar dard, soojha hua gala. Achanak shuru hota hai — jaise soojan aur garmi ki alamat ho.",
+    "potency": "30",
+    "dosage": "3 goliyan har 2 ghantay baad",
+    "rubric_english": "Fever; high, burning, red face. Headache; throbbing, pulsating. Throat; swelling, red."
+  },
+  {
+    "naam": "Bryonia Alba",
+    "urdu": "برایونیا البا",
+    "alamatein": ["khansi", "khansi khushk", "bukhaar", "dard", "dard hiltay se", "pait", "pait sakht", "pyaas zyada"],
+    "tafseel": "Khushk khansi aur bukhaar jo hilne-chalne se barhta hai. Mareez ko tashreef rakhna pasand hai, zyada pyaas lagti hai, pait sakht aur dard hota hai.",
+    "potency": "30",
+    "dosage": "3 goliyan har 3 ghantay baad",
+    "rubric_english": "Cough; dry, worse motion. Fever; worse movement. Thirst; large quantity."
+  },
+  {
+    "naam": "Pulsatilla",
+    "urdu": "پلسٹائلا",
+    "alamatein": ["zukam", "zukam gaarha", "sardi", "khansi", "khansi raat ko", "pait", "pait kharaab khane se", "thakan"],
+    "tafseel": "Gaarha (thick) zukam aur khansi — khaas kar jis mein rang badalta rehta hai. Mareez narm dil, aaram chahta hai, thandi jagah pasand karta hai. Khane ke baad pait kharab hota hai.",
+    "potency": "30",
+    "dosage": "3 goliyan har 3 ghantay baad",
+    "rubric_english": "Coryza; thick, bland, changing. Cough; worse evening, dry at night. Mild, weepy temperament."
+  },
+  {
+    "naam": "Allium Cepa",
+    "urdu": "الیئم سیپا",
+    "alamatein": ["zukam", "zukam paani jaisa", "sardi", "aankh", "aankh paani", "cheenk", "kaan"],
+    "tafseel": "Paani jaisa zukam jo aankhon se bhi paani nikale — jaise pyaaz kaatne se ho. Cheenkain aati rehti hain, naak ka paani jalta hai.",
+    "potency": "30",
+    "dosage": "3 goliyan har 2 ghantay baad",
+    "rubric_english": "Coryza; acrid, watery, profuse. Sneezing; frequent. Eyes; watering, bland discharge."
+  },
+  {
+    "naam": "Gelsemium",
+    "urdu": "جیلسمیم",
+    "alamatein": ["bukhaar", "bukhaar kamzori ke sath", "thakan", "kamzori", "zukam", "sardi", "neend", "neend bhaari", "sar dard", "sar dard peechay"],
+    "tafseel": "Flu jaisa bukhaar jis mein kamzori aur thakan sab se zyada ho. Mareez sust, ungh se bhara, sar peechay se dard karta hai, hiltay mein kaanpta hai.",
+    "potency": "30",
+    "dosage": "3 goliyan har 3 ghantay baad",
+    "rubric_english": "Fever; with weakness, trembling. Dullness, drowsiness. Headache; occipital."
+  },
+  {
+    "naam": "Eupatorium Perfoliatum",
+    "urdu": "یوپیٹوریم پرفولیٹم",
+    "alamatein": ["bukhaar", "bukhaar haddi dard", "dard", "haddi dard", "thakan", "sardi"],
+    "tafseel": "Bukhaar jis ke sath haddiyon mein bohat dard ho — 'bone break fever'. Sardi ke daur se pehle haddi dard shuru hota hai, pyaas lagti hai.",
+    "potency": "30",
+    "dosage": "3 goliyan har 3 ghantay baad",
+    "rubric_english": "Fever; bone pains, aching. Chill preceded by thirst. Intermittent fever."
+  },
+  {
+    "naam": "Arsenicum Album",
+    "urdu": "آرسینکم البم",
+    "alamatein": ["dast", "pait", "pait kharab", "kamzori", "ghabrahat", "bechaini", "thakan", "jalan", "pait jalan"],
+    "tafseel": "Dast aur ulti jis mein kamzori, bechaini aur ghabrahat ho. Pait jalta hai, mareez thanda paani chhota chhota peeta hai, raat ko bura hota hai.",
+    "potency": "30",
+    "dosage": "3 goliyan har 2 ghantay baad",
+    "rubric_english": "Diarrhoea; watery, offensive, with restlessness. Burning pains. Anxiety; health."
+  },
+  {
+    "naam": "Nux Vomica",
+    "urdu": "نکس وومیکا",
+    "alamatein": ["pait", "pait kharab", "pait bhaari", "qe", "ulti", "sar dard", "sardi", "ghussa", "neend", "neend kharab"],
+    "tafseel": "Zyada khane, masaledar khane ya ghalat khanay se pait kharab. Bhaari pait, qe aana, charcha (irritability). Neend kharab aur subah susti.",
+    "potency": "30",
+    "dosage": "3 goliyan raat sone se pehle",
+    "rubric_english": "Stomach; from overeating, rich food. Nausea. Irritable. Sleep; disturbed, morning drowsiness."
+  },
+  {
+    "naam": "Rhus Toxicodendron",
+    "urdu": "رس ٹاکسی کوڈینڈرون",
+    "alamatein": ["dard", "jor dard", "haddi dard", "khansi", "khansi khushk raat ko", "thakan", "zakhm", "khujli"],
+    "tafseel": "Joron aur haddiyon ka dard jo aaram par zyada aur hilne ke baad kam hota hai. Raat ki khushk khansi. Khujli wale zakhm aur daag.",
+    "potency": "30",
+    "dosage": "3 goliyan har 3 ghantay baad",
+    "rubric_english": "Rheumatism; worse rest, better motion. Cough; dry, night. Skin; itching, vesicular."
+  },
+  {
+    "naam": "Chamomilla",
+    "urdu": "کیموملا",
+    "alamatein": ["daant", "daant nikalna", "daant dard", "ghussa", "roona", "pait", "pait dard", "neend", "neend kharab"],
+    "tafseel": "Bachon ke daant nikalne ka dard, ghussa aur roona. Bacha banta hai, chahat hai lekin kuch pasand nahi aata. Pait dard aur bechain neend.",
+    "potency": "30",
+    "dosage": "2 goliyan har ghantay baad",
+    "rubric_english": "Teething; painful, irritable. Anger, crossness. Sleep; disturbed, child cries."
+  },
+  {
+    "naam": "Ferrum Phosphoricum",
+    "urdu": "فیلم فاسفورکم",
+    "alamatein": ["bukhaar", "bukhaar shuruati", "kamzori", "thakan", "sardi", "khansi", "khoon ki kami"],
+    "tafseel": "Bukhaar ke shuruati marhale ka ilaj — jab alamatein halke hon aur pata na chale kya ho. Kamzori aur khoon ki kami mein bhi madadgar.",
+    "potency": "6X",
+    "dosage": "4 goliyan har 3 ghantay baad",
+    "rubric_english": "Fever; first stage, mild, no local symptoms. Anemia. Weakness."
+  }
+]
