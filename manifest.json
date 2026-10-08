@@ -1,0 +1,21 @@
+{
+  "name": "Rapid Approach (Remedies Finder)",
+  "short_name": "RA Remedies",
+  "description": "Homeopathic dawa dhoondhne ka asaan app — Roman Urdu aur English mein",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f9f7",
+  "theme_color": "#0d6e4f",
+  "lang": "ur",
+  "categories": ["medical", "health", "utilities"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
