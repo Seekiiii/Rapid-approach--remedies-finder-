@@ -1,0 +1,394 @@
+/* ============================================================
+   RAPID APPROACH (Remedies Finder) — style.css
+   Design System: Medical Green Theme + Dark Mode + Nastaliq
+   ============================================================ */
+
+/* ---------- 1. DESIGN TOKENS (Colors & Variables) ---------- */
+:root {
+  /* Brand Colors */
+  --primary: #0d6e4f;
+  --primary-dark: #0a5a40;
+  --primary-light: #e6f4ef;
+  --accent: #d4a017;
+
+  /* Surface Colors */
+  --bg: #f6f9f7;
+  --surface: #ffffff;
+  --surface-2: #eef4f1;
+  --text: #1a2b24;
+  --text-muted: #6b7d75;
+  --border: #dde7e2;
+
+  /* Status */
+  --danger: #c0392b;
+  --success: #1e8e5a;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(13, 110, 79, 0.08);
+  --shadow-md: 0 4px 12px rgba(13, 110, 79, 0.12);
+  --shadow-lg: 0 8px 24px rgba(13, 110, 79, 0.18);
+
+  /* Radius & Spacing */
+  --radius: 14px;
+  --radius-sm: 10px;
+  --space: 16px;
+
+  /* Fonts */
+  --font-main: 'Poppins', system-ui, sans-serif;
+  --font-urdu: 'Noto Nastaliq Urdu', serif;
+}
+
+/* ---------- DARK MODE ---------- */
+[data-theme="dark"] {
+  --primary: #2eb886;
+  --primary-light: #12352a;
+  --bg: #0f1714;
+  --surface: #1a2622;
+  --surface-2: #22332d;
+  --text: #e8f0ec;
+  --text-muted: #8fa39a;
+  --border: #2c4038;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- 2. RESET & BASE ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-bottom: 90px; /* Bottom nav ke liye jagah */
+  transition: background 0.3s, color 0.3s;
+}
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+input { font-family: inherit; }
+
+.hidden { display: none !important; }
+
+/* Urdu text — Nastaliq with proper spacing */
+.urdu-text {
+  font-family: var(--font-urdu);
+  direction: rtl;
+  line-height: 2; /* Nastaliq ko zyada line-height chahiye */
+}
+
+/* ---------- 3. HEADER ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px var(--space);
+  padding-top: calc(12px + env(safe-area-inset-top));
+  background: var(--primary);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+
+.brand { display: flex; align-items: center; gap: 12px; }
+
+.logo {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-sm);
+}
+
+.brand-text h1 { font-size: 1.05rem; font-weight: 700; line-height: 1.2; }
+.brand-text p { font-size: 0.72rem; opacity: 0.85; letter-spacing: 0.5px; }
+
+/* ---------- 4. ICON BUTTONS ---------- */
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.icon-btn:active { background: rgba(255, 255, 255, 0.2); }
+
+/* ---------- 5. MODE TOGGLE (Hick's Law: sirf 2) ---------- */
+.mode-toggle {
+  display: flex;
+  gap: 8px;
+  padding: var(--space);
+  padding-bottom: 8px;
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1.5px solid var(--border);
+  transition: all 0.25s;
+}
+
+.mode-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- 6. SEARCH BOX ---------- */
+.search-wrap { padding: 4px var(--space) 8px; }
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 8px 4px 14px;
+  box-shadow: var(--shadow-sm);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.search-box:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.search-icon { font-size: 1rem; opacity: 0.6; }
+
+#searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 0;
+  font-size: 0.95rem;
+  color: var(--text);
+  min-width: 0;
+}
+
+#searchInput::placeholder { color: var(--text-muted); }
+
+/* ---------- 7. QUICK CHIPS ---------- */
+.chips {
+  display: flex;
+  gap: 8px;
+  padding: 8px var(--space) 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.chips::-webkit-scrollbar { display: none; }
+
+.chip {
+  flex-shrink: 0;
+  padding: 7px 14px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: var(--surface);
+  color: var(--primary);
+  border: 1.5px solid var(--primary-light);
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+.chip:active { background: var(--primary); color: #fff; }
+
+/* ---------- 8. RESULTS ---------- */
+.results { padding: 4px var(--space) var(--space); }
+
+.result-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+  animation: slideUp 0.25s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.medicine-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.medicine-urdu {
+  font-family: var(--font-urdu);
+  direction: rtl;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 2;
+}
+
+.symptom-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+
+.symptom-tag {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.potency-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+}
+
+.match-score {
+  float: right;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ---------- 9. DETAIL MODAL ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal-card {
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--surface);
+  border-radius: 20px 20px 0 0;
+  padding: 20px var(--space);
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+  animation: slideUpSheet 0.3s ease;
+}
+
+@keyframes slideUpSheet {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.modal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  background: var(--surface-2);
+  margin-bottom: 8px;
+}
+
+.modal-card h2 { color: var(--primary); font-size: 1.3rem; margin-bottom: 4px; }
+.modal-card h3 { font-size: 0.95rem; margin: 14px 0 6px; color: var(--text); }
+.modal-card p { font-size: 0.9rem; color: var(--text-muted); }
+.modal-card .urdu-text { font-size: 1rem; }
+
+/* ---------- 10. TOAST (Peak-End Rule: warm ending) ---------- */
+.toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  max-width: 90%;
+  padding: 12px 20px;
+  background: var(--primary-dark);
+  color: #fff;
+  font-size: 0.88rem;
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  animation: toastIn 0.3s ease;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* ---------- 11. BOTTOM NAV (Thumb Zone) ---------- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: flex;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.nav-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 0 8px;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.nav-btn span { font-size: 0.68rem; font-weight: 500; }
+.nav-btn.active { color: var(--primary); }
+
+/* ---------- 12. FOOTER ---------- */
+.footer {
+  padding: 20px var(--space) 24px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+
+.footer p { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px; }
+.footer .urdu-text { font-size: 0.95rem; color: var(--danger); font-weight: 700; }
+.footer-brand { font-weight: 600; color: var(--primary) !important; }
+
+/* ---------- 13. EMPTY STATE ---------- */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+}
+.empty-state .icon { font-size: 2.5rem; margin-bottom: 10px; }
+.empty-state p { font-size: 0.9rem; }
+
+/* ---------- 14. DESKTOP (agar bari screen par khule) ---------- */
+@media (min-width: 768px) {
+  body { max-width: 640px; margin: 0 auto; box-shadow: var(--shadow-lg); }
+  .bottom-nav { max-width: 640px; left: 50%; transform: translateX(-50%); }
+}
